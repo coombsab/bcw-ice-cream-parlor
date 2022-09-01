@@ -1,0 +1,93 @@
+:root {
+  --background-body: #FFF3C8;
+  --background-cart: #ffffff;
+  --background-cart-alternate: #f1f1f1;
+  --background-product: #FFF2F8;
+  --cart-border: #CBCBCB;
+  --cart-pay: #f3f3f3;
+  --text-cart: #12A0DF;
+  --text-titles: #DAAD6A;
+  --text-cart-alternate: #0f0f0f;
+  --text-product: #D08C98;
+}
+
+body {
+  background-color: var(--background-body);
+}
+
+.font-rb {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 64px;
+  font-weight: 400;
+  color: var(--text-titles);
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+}
+
+.cart {
+  background-color: var(--background-cart);
+  color: var(--text-cart);
+  min-height: 95vh;
+  border: 1px solid var(--cart-border);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.cart .cart-header {
+  height: 3vh;
+  font-weight: 700;
+  border-bottom: 1px solid var(--cart-border);
+}
+
+.cart-spacer {
+  height: 1.5rem;
+}
+
+.cart .cart-item {
+  color: var(--text-cart-alternate);
+  border-top: 1px solid var(--cart-border);
+  border-bottom: 1px solid var(--cart-border);
+  height: 8vh;
+  display: flex;
+  align-items: center;
+}
+
+.cart .cart-item-alternate {
+  background-color: var(--background-cart-alternate);
+  color: var(--text-cart-alternate);
+  border-top: 1px solid var(--cart-border);
+  border-bottom: 1px solid var(--cart-border);
+  height: 8vh;
+  display: flex;
+  align-items: center;
+}
+
+.cart .cart-pay {
+  border-bottom: 5px 1px 1px 1px solid var(--cart-border);
+  background-color: var(--cart-pay);
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+
+.product {
+  background-color: var(--background-product);
+  padding: 0.5rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  font-family: 'Patrick Hand SC', cursive;
+  color: var(--text-product);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.product-container {
+  max-height: 15vh;
+  max-width: 20vh;
+  display: flex;
+}
