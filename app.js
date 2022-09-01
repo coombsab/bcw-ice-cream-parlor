@@ -134,32 +134,32 @@ function drawCartItems() {
       if (item.quantity > 0) {
         if (alternateStyleCounter % 2 === 0) {
           template += `
-          <div class="col-md-6 cart-item-alternate justify-content-start ps-4">
+          <div class="col-6 cart-item-alternate justify-content-start ps-4">
             <p class="mb-0">${item.name}</p>
           </div>
-          <div class="col-md-2 cart-item-alternate justify-content-center">
+          <div class="col-2 cart-item-alternate justify-content-center">
             <p class="mb-0">${item.quantity}</p>
           </div>
-          <div class="col-md-2 cart-item-alternate justify-content-center">
+          <div class="col-2 cart-item-alternate justify-content-center">
             <p class="mb-0">$${item.price}</p>
           </div>
-          <div class="col-md-2 cart-item-alternate justify-content-center">
+          <div class="col-2 cart-item-alternate justify-content-center">
             <p class="mb-0">$${item.price * item.quantity}</p>
           </div>
           `
           alternateStyleCounter++
         } else {
           template += `
-          <div class="col-md-6 cart-item justify-content-start ps-4">
+          <div class="col-6 cart-item justify-content-start ps-4">
             <p class="mb-0">${item.name}</p>
           </div>
-          <div class="col-md-2 cart-item justify-content-center">
+          <div class="col-2 cart-item justify-content-center">
             <p class="mb-0">${item.quantity}</p>
           </div>
-          <div class="col-md-2 cart-item justify-content-center">
+          <div class="col-2 cart-item justify-content-center">
             <p class="mb-0">$${item.price}</p>
           </div>
-          <div class="col-md-2 cart-item justify-content-center">
+          <div class="col-2 cart-item justify-content-center">
             <p class="mb-0">$${item.price * item.quantity}</p>
           </div>
           `
@@ -179,7 +179,7 @@ function drawToppings() {
 
   products.get("toppings").forEach(topping => {
     template += `
-      <div class="col-md-4">
+      <div class="col-md-4 my-2">
         <div class="product" id=topping-${topping.id}>
           <img onclick="addToCart('${topping.id}')" class="img-fluid" src="${topping.image}" alt="${topping.name}">
           <p class="mb-0">${topping.name} $<span id="price-${topping.id}">${topping.price}</span></p>
@@ -198,7 +198,7 @@ function drawVessels() {
 
   products.get("vessels").forEach(vessel => {
     template += `
-      <div class="col-md-4">
+      <div class="col-md-4 my-2">
         <div class="product" id=topping-${vessel.id}>
           <img onclick="addToCart('${vessel.id}')" class="img-fluid" src="${vessel.image}" alt="${vessel.name}">
           <p class="mb-0">${vessel.name} $<span id="price-${vessel.id}">${vessel.price}</span></p>
@@ -217,7 +217,7 @@ function drawIceCream() {
 
   products.get("iceCream").forEach(iceCream => {
     template += `
-      <div class="col-md-4">
+      <div class="col-md-4 my-2">
         <div class="product" id=topping-${iceCream.id}>
           <img onclick="addToCart('${iceCream.id}')" class="img-fluid" src="${iceCream.image}" alt="${iceCream.name}">
           <p class="mb-0">${iceCream.name} $<span id="price-${iceCream.id}">${iceCream.price}</span></p>
